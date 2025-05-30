@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Contact form</title>
+
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+
+    <article id="success" class="hidden">
+      <div>
+        <img src="./assets/images/icon-success-check.svg" alt="icon" class="icon">
+      <h2>Message Sent!</h2>
+      </div>
+      <p>Thanks for completing the form. We'll be in touch soon!</p>
+    </article>
+
+    <form>
+      <h1>Contact Us</h1>
+
+      <div id="fullname-wrapper">
+        <div class="field-div name" >
+        <label for="fname" class="labels"
+          >First name
+          <span class="asterisk">*</span>
+        </label>
+        <input type="text" name="fname" id="fname" class="inputs" />
+        <div class="errors invisible">This field is required</div>
+      </div>
+
+      <div class="field-div name">
+        <label for="lname" class="labels"
+          >Last name<span class="asterisk">*</span></label
+        >
+        <input type="text" name="lname" id="lname" class="inputs" />
+        <div class="errors invisible">This field is required</div>
+      </div>
+      </div>
+
+      <div class="field-div">
+        <label for="email">Email Address<span class="asterisk">*</span></label>
+        <input type="text" name="email" id="email" class="inputs" />
+        <div class="errors invisible" id="empty-email">This field is required</div>
+        <div class="errors invisible" id="not-valid-email">
+          Please enter a valid email address
+        </div>
+      </div>
+
+      <div class="field-div" id="query-wrapper">
+        <label for="query">Query Type<span class="asterisk">*</span></label>
+        <div id="query-btn-wrapper">
+          <button class="radio-option inputs" data-value="general">
+          <span class="radio-icon inactive"></span
+          ><img
+            src="./assets/images/icon-radio-selected.svg"
+            alt="icon"
+            class="radio-icon active hidden"
+          />General Enquiry
+        </button>
+        <button class="radio-option inputs" data-value="support">
+          <span class="radio-icon inactive"></span
+          ><img
+            src="./assets/images/icon-radio-selected.svg"
+            alt="icon"
+            class="radio-icon active hidden"
+          />Support Request
+        </button>
+        </div>
+        <div class="errors invisible">Please select a query type</div>
+      </div>
+
+      <div class="field-div">
+        <label for="message">Message<span class="asterisk">*</span></label>
+        <textarea name="message" id="message"></textarea>
+        <div class="errors invisible">This field is required</div>
+      </div>
+
+      <div class="field-div" id="checkbox-wrapper">
+        <input type="checkbox" name="consent" id="consent" value="ok"/>
+        <label for="consent" id="checkbox-label"
+          >I consent to being contacted by the team<span class="asterisk"
+            >*</span
+          ></label
+        >
+        <div class="errors invisible">
+          To submit this form, please consent to being contacted
+        </div>
+      </div>
+
+      <button id="submit">Submit</button>
+    </form>
+
+    
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/domdem-dev" target="_blank">domdem-dev</a>.
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
